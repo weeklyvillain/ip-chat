@@ -1,0 +1,26 @@
+{
+  "127.0.0.1": {
+    "3000": [
+      {
+        "who":  "you"
+        "type": "str",
+        "data": "Hej"
+      },
+      {
+        "who":  "Other"
+        "type": "img",
+        "data": "https://i.imgur.com/EsRngxD.jpg"
+      }
+    ],
+    "3001": [
+      {
+        "type": "str",
+        "data": "Hej"
+      },
+      {
+        "type": "img",
+        "data": "https://i.imgur.com/YNrctE9.jpg"
+      }
+    ]
+  }
+}

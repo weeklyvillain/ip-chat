@@ -1,0 +1,36 @@
+﻿<Window x:Class="LAB.viewHistory"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LAB"
+        mc:Ignorable="d"
+        Title="viewHistory" Height="450" Width="800">
+
+    <Window.Resources>
+        <DataTemplate x:Key="ImageTemplate">
+            <ListBoxItem>
+                <StackPanel>
+                    <TextBlock Text="{Binding Path=Who}"/>
+                    <Image Width="200" Height="200" Stretch="Fill" Source="{Binding Path=Source}"></Image>
+                </StackPanel>
+            </ListBoxItem>
+        </DataTemplate>
+        <DataTemplate x:Key="TextTemplate">
+            <ListBoxItem>
+                <StackPanel>
+                    <TextBlock Text="{Binding Path=Who}" />
+                    <TextBlock Width="500" Text="{Binding Path=Data}" TextWrapping="Wrap"/>
+                </StackPanel>
+            </ListBoxItem>
+        </DataTemplate>
+        <local:ChattTemplateSelector  x:Key="ChattTemplateSelector"/>
+    </Window.Resources>
+    <Grid>
+        <ListBox x:Name="UsersBox" HorizontalAlignment="Left" Height="370" Margin="10,39,0,0" VerticalAlignment="Top" Width="203" ItemsSource="{Binding Path=UserList}" SelectionChanged="UsersBox_SelectionChanged" Background="#FFDDDDDD"/>
+        <ListBox x:Name="chattBox" HorizontalAlignment="Left" Height="399" Margin="218,10,0,0" VerticalAlignment="Top" Width="564" ItemsSource="{ Binding Path=oldChatMessages }" ItemTemplateSelector="{StaticResource ChattTemplateSelector}" Background="#FFDDDDDD"/>
+        <TextBox x:Name="searchBar" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="136" Text="{Binding searchText, Mode=TwoWay}" Background="#FFDDDDDD"  />
+        <Button x:Name="searchButton" Content="Search" HorizontalAlignment="Left" Margin="151,10,0,0" VerticalAlignment="Top" Width="62" Height="23" Click="SearchButton_Click"/>
+
+    </Grid>
+</Window>

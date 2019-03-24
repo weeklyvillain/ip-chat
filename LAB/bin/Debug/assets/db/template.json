@@ -1,0 +1,28 @@
+{
+ {
+		"Anon" : [
+			{"who": "Anon", 
+				"type": "text", 
+			"data": "Hej!", 
+			"time": ""
+			},
+			{"who": "Anon1", 
+				"type": "text", 
+			"data": "Hej hej!", 
+			"time": ""
+			}
+		],
+	"Anon2" : [
+			{"who": "Anon", 
+			"type": "text", 
+			"data": "Hej!", 
+			"time": ""
+			},
+			{"who": "Anon2", 
+				"type": "text", 
+			"data": "Hej hej!", 
+			"time": ""
+			}
+		]
+		}
+}
